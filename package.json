@@ -7,11 +7,17 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^6",
-    "express": "^4"
+    "express": "^4",
+    "hdb": "^0.19.0",
+    "@sap/xssec": "^3",
+    "passport": "^0"
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.102.14",
     "sqlite3": "^5.0.4"
+  },
+  "engines": {
+    "node": "^16"
   },
   "scripts": {
     "start": "cds run",
@@ -19,9 +25,6 @@
     "watch-suppliers": "cds watch --open suppliers/webapp/index.html?sap-ui-xx-viewCache=false",
     "watch-poheaders": "cds watch --open poheaders/webapp/index.html?sap-ui-xx-viewCache=false",
     "watch-poitems": "cds watch --open poitems/webapp/index.html?sap-ui-xx-viewCache=false"
-  },
-  "engines": {
-    "node": "^16.15"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -53,5 +56,20 @@
     "app/suppliers",
     "app/poheaders",
     "app/poitems"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "[production]": {
+        "db": {
+          "kind": "hana-cloud"
+        },
+        "auth": {
+          "kind": "xsuaa"
+        }
+      },
+      "db": {
+        "kind": "sql"
+      }
+    }
+  }
 }

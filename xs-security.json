@@ -1,0 +1,31 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.FedexViewer",
+      "description": "FedexViewer"
+    },
+    {
+      "name": "$XSAPPNAME.FedexManager",
+      "description": "FedexManager"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "FedexViewer",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.FedexViewer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "FedexManager",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.FedexManager"
+      ],
+      "attribute-references": []
+    }
+  ]
+}

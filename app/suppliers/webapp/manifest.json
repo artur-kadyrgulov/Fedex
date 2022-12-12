@@ -15,6 +15,18 @@
       "version": "1.8.3",
       "toolsId": "83989d76-afa8-4c2d-8d8c-57621216b134"
     },
+    "crossNavigation": {
+      "inbounds": {
+          "Suppliers-display": {
+              "signature": {
+                  "parameters": {},
+                  "additionalParameters": "allowed"
+              },
+              "semanticObject": "Suppliers",
+              "action": "display"
+          }
+      }
+    },
     "dataSources": {
       "mainService": {
         "uri": "/catalog/",

@@ -15,6 +15,18 @@
       "version": "1.8.3",
       "toolsId": "c2412c2c-a141-4128-b766-6b30499c6cc1"
     },
+    "crossNavigation": {
+      "inbounds": {
+          "POItems-display": {
+              "signature": {
+                  "parameters": {},
+                  "additionalParameters": "allowed"
+              },
+              "semanticObject": "POItems",
+              "action": "display"
+          }
+      }
+    },
     "dataSources": {
       "mainService": {
         "uri": "/catalog/",

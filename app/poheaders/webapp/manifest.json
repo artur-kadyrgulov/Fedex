@@ -15,6 +15,18 @@
       "version": "1.8.3",
       "toolsId": "9317a7a9-9b79-4af0-a5a0-696367f50e9e"
     },
+    "crossNavigation": {
+      "inbounds": {
+          "POHeaders-display": {
+              "signature": {
+                  "parameters": {},
+                  "additionalParameters": "allowed"
+              },
+              "semanticObject": "POHeaders",
+              "action": "display"
+          }
+      }
+    },
     "dataSources": {
       "mainService": {
         "uri": "/catalog/",
