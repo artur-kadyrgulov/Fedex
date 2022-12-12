@@ -25,7 +25,6 @@
         "watch-companycodes": "cds watch --open companycodes/webapp/index.html?sap-ui-xx-viewCache=false",
         "watch-suppliers": "cds watch --open suppliers/webapp/index.html?sap-ui-xx-viewCache=false",
         "watch-poheaders": "cds watch --open poheaders/webapp/index.html?sap-ui-xx-viewCache=false",
-        "watch-poitems": "cds watch --open poitems/webapp/index.html?sap-ui-xx-viewCache=false",
         "undeploy": "cf undeploy fedex --delete-services --delete-service-keys --delete-service-brokers",
         "build": "rimraf resources mta_archives && mbt build --mtar archive",
         "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
