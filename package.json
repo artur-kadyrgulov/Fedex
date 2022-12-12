@@ -10,10 +10,15 @@
     "express": "^4"
   },
   "devDependencies": {
+    "@sap/ux-specification": "^1.102.14",
     "sqlite3": "^5.0.4"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run",
+    "watch-companycodes": "cds watch --open companycodes/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-suppliers": "cds watch --open suppliers/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-poheaders": "cds watch --open poheaders/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-poitems": "cds watch --open poitems/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "engines": {
     "node": "^16.15"
@@ -42,5 +47,11 @@
       "no-console": "off",
       "require-atomic-updates": "off"
     }
-  }
+  },
+  "sapux": [
+    "app/companycodes",
+    "app/suppliers",
+    "app/poheaders",
+    "app/poitems"
+  ]
 }
