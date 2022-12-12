@@ -29,17 +29,25 @@ entity POHeaders: managed, cuid {
   currency : String(3);
   companyCode : Association to CompanyCodes;
   supplier : Association to Suppliers;
-  poItems: Association to many POItems on poItems.poHeader = $self;
+  poItems : Composition of many {
+      key ID : UUID;
+      title : String(20);
+      description : String(255);
+      tax : Integer;
+      priceWithoutTax : Integer;
+      priceOfTax : Integer @readonly;
+      priceWithTax : Integer @readonly;
+  }
 }
 
-entity POItems: managed, cuid {
-  POItemNumber : Integer @readonly;
-  title : String(20);
-  description : String(255);
-  tax : Integer;
-  priceWithoutTax : Integer;
-  priceOfTax : Integer @readonly;
-  priceWithTax : Integer @readonly;
-  poHeader : Association to POHeaders;
-}
-
+//entity POItems: managed, cuid {
+//  POItemNumber : Integer @readonly;
+//  title : String(20);
+//  description : String(255);
+//  tax : Integer;
+//  priceWithoutTax : Integer;
+//  priceOfTax : Integer @readonly;
+//  priceWithTax : Integer @readonly;
+//  poHeader : Association to POHeaders;
+//}
+//

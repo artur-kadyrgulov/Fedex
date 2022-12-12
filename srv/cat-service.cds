@@ -37,16 +37,16 @@ service CatalogService {
     ]) as projection on my.POHeaders;
     annotate POHeaders with @odata.draft.enabled;
 
-    entity POItems @(restrict : [
-            {
-                grant : [ 'READ' ],
-                to : [ 'FedexViewer' ]
-            },
-            {
-                grant : [ '*' ],
-                to : [ 'FedexManager' ]
-            }
-    ]) as projection on my.POItems;
-    annotate POItems with @odata.draft.enabled;
+//    entity POItems @(restrict : [
+//            {
+//                grant : [ 'READ' ],
+//                to : [ 'FedexViewer' ]
+//            },
+//            {
+//                grant : [ '*' ],
+//                to : [ 'FedexManager' ]
+//            }
+//    ]) as projection on my.POItems;
+//    annotate POItems with @odata.draft.enabled;
 
 }
